@@ -1,0 +1,85 @@
+import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Modal from "./Modal";
+
+function App() {
+  const [input, setInput] = React.useState({
+    title: "",
+    author: "",
+    date: "",
+    notes: "",
+  });
+
+  const [list, setList] = React.useState([]);
+
+  function handleChange(e) {
+    const handleName = e.target.name;
+    const handleValue = e.target.value;
+
+    setInput((prev) => ({ ...prev, [handleName]: handleValue }));
+  }
+
+  function addItem() {
+    setList((prev) => [...prev, { ...input, id: list.length, isEdit: false }]);
+    setInput({
+      title: "",
+      author: "",
+      date: "",
+      notes: "",
+    });
+  }
+  console.log(list);
+
+  function deleteItem(id) {
+    const deleteList = list.filter((li) => li.id !== id);
+    setList(deleteList);
+  }
+
+  function editList(id) {
+    setList((prev) =>
+      prev.map((el) => (el.id === id ? { ...el, isEdit: !el.isEdit } : el))
+    );
+  }
+
+  function handleEdit(event, id) {
+    setList((prev) =>
+      prev.map((li) =>
+        li.id === id ? { ...li, input: event.target.value } : li
+      )
+    );
+  }
+
+  // edit icon pe click karke handleShow() se modal open hoga but wo Modal.jsx me h wo App.jsx me kese aaega
+
+  return (
+    <div className="full-bg">
+      <div className="main-bg">
+        <h1>My Books</h1>
+        <Modal
+          input={input}
+          handleChange={handleChange}
+          addItem={addItem}
+          handleEdit={handleEdit}
+        />
+        <h1>Read / Want to read</h1>
+        {list.map((li, i) => (
+          <div key={i}>
+            <p>{li.title}</p>
+            <p>{li.author}</p>
+            <p>{li.date}</p>
+            <p>{li.notes}</p>
+            {/* ICON CLASSNAME IS "ICON" */}
+            <i className="fa fa-edit icon" onClick={() => editList(li.id)}></i>
+            <i
+              className="fa fa-trash icon"
+              onClick={() => deleteItem(li.id)}
+            ></i>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default App;
