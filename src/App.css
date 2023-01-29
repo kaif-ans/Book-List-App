@@ -6,7 +6,7 @@
   background: rgb(229, 156, 156);
   border: 1px solid;
   width: 50%;
-  height: 93vh;
+  height: 100%;
   margin: 30px auto;
 }
 .main-bg {
@@ -15,7 +15,7 @@
   border-radius: 10px;
   
   width: 85%;
-  height: 91%;
+  height: 100%;
   margin: 35px auto;
   /* display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@
 .add-new-book-btn {
   width: 95%;
   /* height: 5%; */
-  background: rgb(204, 93, 93);
+  background: rgb(194, 81, 81);
   padding: 5px;
   border-radius: 7px;
   border: none;

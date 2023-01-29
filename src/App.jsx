@@ -4,6 +4,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Modal from "./Modal";
 
 function App() {
+  const [show, setShow] = React.useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const [input, setInput] = React.useState({
     title: "",
     author: "",
@@ -40,6 +45,7 @@ function App() {
     setList((prev) =>
       prev.map((el) => (el.id === id ? { ...el, isEdit: !el.isEdit } : el))
     );
+    setShow(true);
   }
 
   function handleEdit(event, id) {
@@ -50,13 +56,14 @@ function App() {
     );
   }
 
-  // edit icon pe click karke handleShow() se modal open hoga but wo Modal.jsx me h wo App.jsx me kese aaega
-
   return (
     <div className="full-bg">
       <div className="main-bg">
         <h1>My Books</h1>
         <Modal
+          show={show}
+          handleClose={handleClose}
+          handleShow={handleShow}
           input={input}
           handleChange={handleChange}
           addItem={addItem}

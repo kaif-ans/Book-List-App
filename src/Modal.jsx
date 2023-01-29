@@ -3,17 +3,19 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 
-function Example({ input, handleChange, addItem, handleEdit }) {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+function Example({
+  input,
+  handleChange,
+  addItem,
+  handleEdit,
+  show,
+  handleClose,
+  handleShow,
+}) {
   return (
     <>
       <button className="add-new-book-btn" onClick={handleShow}>
-        <>Add New Book</>
-        <>+</>
+        Add New Book
       </button>
 
       <Modal show={show} onHide={handleClose}>
