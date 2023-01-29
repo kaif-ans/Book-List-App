@@ -41,15 +41,7 @@
   font-size: larger;
   text-align: left;
   margin: 15px 0 40px 0;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
 }
-/* .add-new-book-btn > p {
-  background: transparent;
-  font-size: larger;
-  border: 1px solid;
-} */
 
 
 /* LIST */
@@ -64,7 +56,6 @@
   background: transparent;
   text-align: left;
   color: rgb(88, 32, 32);
-  /* font-weight: 500; */
 }
 .icon-div {
   background: transparent;
