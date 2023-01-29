@@ -59,7 +59,7 @@ function App() {
   return (
     <div className="full-bg">
       <div className="main-bg">
-        <h1>My Books</h1>
+        <h1 className="heading">My Books</h1>
         <Modal
           show={show}
           handleClose={handleClose}
@@ -69,7 +69,7 @@ function App() {
           addItem={addItem}
           handleEdit={handleEdit}
         />
-        <h2>Read / Want to read</h2>
+        <h2 className="heading">Read / Want to read</h2>
         {list.map((li, i) => (
           <div key={i} className="list">
             <p>{li.title}</p>
