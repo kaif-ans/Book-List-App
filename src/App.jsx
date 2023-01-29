@@ -69,19 +69,22 @@ function App() {
           addItem={addItem}
           handleEdit={handleEdit}
         />
-        <h1>Read / Want to read</h1>
+        <h2>Read / Want to read</h2>
         {list.map((li, i) => (
-          <div key={i}>
+          <div key={i} className="list">
             <p>{li.title}</p>
             <p>{li.author}</p>
             <p>{li.date}</p>
             <p>{li.notes}</p>
-            {/* ICON CLASSNAME IS "ICON" */}
-            <i className="fa fa-edit icon" onClick={() => editList(li.id)}></i>
-            <i
-              className="fa fa-trash icon"
-              onClick={() => deleteItem(li.id)}
-            ></i>
+            <div className="icon-div">
+              <i className="fa fa-edit icon" onClick={() => editList(li.id)}>
+                &nbsp;
+              </i>
+              <i
+                className="fa fa-trash icon"
+                onClick={() => deleteItem(li.id)}
+              ></i>
+            </div>
           </div>
         ))}
       </div>

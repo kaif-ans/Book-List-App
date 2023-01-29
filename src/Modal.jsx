@@ -15,7 +15,7 @@ function Example({
   return (
     <>
       <button className="add-new-book-btn" onClick={handleShow}>
-        Add New Book
+        &nbsp; Add New Book...
       </button>
 
       <Modal show={show} onHide={handleClose}>

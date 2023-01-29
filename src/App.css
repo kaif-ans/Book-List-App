@@ -4,7 +4,7 @@
 }
 .full-bg {
   background: rgb(229, 156, 156);
-  border: 1px solid;
+  border: 1px solid rgb(229, 156, 156);
   width: 50%;
   height: 100%;
   margin: 30px auto;
@@ -13,7 +13,6 @@
   /* background nhi lag ra ispe */
   border: none;
   border-radius: 10px;
-  
   width: 85%;
   height: 100%;
   margin: 35px auto;
@@ -35,6 +34,7 @@
   color: white;
   font-size: larger;
   text-align: left;
+  margin: 15px 0 40px 0;
   /* display: flex;
   justify-content: space-between;
   align-items: center; */
@@ -44,3 +44,29 @@
   font-size: larger;
   border: 1px solid;
 } */
+
+
+/* LIST */
+.list {
+  /* border: 1px solid; */
+  border-radius: 10px;
+  padding: 25px;
+  background-color: lightpink;
+  margin: 15px ;
+}
+.list > p {
+  background: transparent;
+  text-align: left;
+  color: rgb(88, 32, 32);
+  /* font-weight: 500; */
+}
+.icon-div {
+  background: transparent;
+  text-align: right;
+}
+.icon {
+  font-size: large;
+  font-weight: bold;
+  background: transparent;
+  color: rgb(82, 14, 14);
+} 
