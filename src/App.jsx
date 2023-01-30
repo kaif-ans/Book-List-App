@@ -46,6 +46,7 @@ function App() {
       prev.map((el) => (el.id === id ? { ...el, isEdit: !el.isEdit } : el))
     );
     setShow(true);
+    console.log(id);
   }
 
   function handleEdit(event, id) {
