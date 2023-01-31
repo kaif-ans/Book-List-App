@@ -76,7 +76,7 @@ function Example({
           <Button
             variant="primary"
             onClick={() => {
-              addItem(), handleClose();
+              addItem(input?.id), handleClose();
             }}
           >
             Add

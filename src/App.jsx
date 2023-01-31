@@ -5,16 +5,26 @@ import Modal from "./Modal";
 
 function App() {
   const [show, setShow] = React.useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   const [input, setInput] = React.useState({
     title: "",
     author: "",
     date: "",
     notes: "",
   });
+
+  console.log(input);
+
+  const handleClose = () => {
+    setShow(false);
+    setInput({
+      title: "",
+      author: "",
+      date: "",
+      notes: "",
+      id: "",
+    });
+  };
+  const handleShow = () => setShow(true);
 
   const [list, setList] = React.useState([]);
 
@@ -25,8 +35,13 @@ function App() {
     setInput((prev) => ({ ...prev, [handleName]: handleValue }));
   }
 
-  function addItem() {
-    setList((prev) => [...prev, { ...input, id: list.length, isEdit: false }]);
+  function addItem(id) {
+    id
+      ? setList((prev) => prev.map((el) => (el.id === id ? input : el)))
+      : setList((prev) => [
+          ...prev,
+          { ...input, id: list.length, isEdit: false },
+        ]);
     setInput({
       title: "",
       author: "",
@@ -42,9 +57,10 @@ function App() {
   }
 
   function editList(id) {
-    setList((prev) =>
-      prev.map((el) => (el.id === id ? { ...el, isEdit: !el.isEdit } : el))
-    );
+    console.log(id);
+    const editBookData = list.find((i) => i.id === id);
+    setInput(editBookData);
+
     setShow(true);
     console.log(id);
   }
