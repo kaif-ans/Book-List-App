@@ -7,7 +7,6 @@ function Example({
   input,
   handleChange,
   addItem,
-  handleEdit,
   show,
   handleClose,
   handleShow,
