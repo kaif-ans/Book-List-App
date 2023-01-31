@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Modal from "./Modal";
+import { nanoid } from "nanoid";
 
 function App() {
   const [show, setShow] = React.useState(false);
@@ -11,8 +12,6 @@ function App() {
     date: "",
     notes: "",
   });
-
-  console.log(input);
 
   const handleClose = () => {
     setShow(false);
@@ -38,10 +37,7 @@ function App() {
   function addItem(id) {
     id
       ? setList((prev) => prev.map((el) => (el.id === id ? input : el)))
-      : setList((prev) => [
-          ...prev,
-          { ...input, id: list.length, isEdit: false },
-        ]);
+      : setList((prev) => [...prev, { ...input, id: nanoid(), isEdit: false }]);
     setInput({
       title: "",
       author: "",
@@ -49,7 +45,6 @@ function App() {
       notes: "",
     });
   }
-  console.log(list);
 
   function deleteItem(id) {
     const deleteList = list.filter((li) => li.id !== id);
@@ -57,12 +52,9 @@ function App() {
   }
 
   function editList(id) {
-    console.log(id);
     const editBookData = list.find((i) => i.id === id);
     setInput(editBookData);
-
     setShow(true);
-    console.log(id);
   }
 
   function handleEdit(event, id) {
