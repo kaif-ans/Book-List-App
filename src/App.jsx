@@ -74,7 +74,6 @@ function App() {
           input={input}
           handleChange={handleChange}
           addItem={addItem}
-          handleEdit={handleEdit}
         />
         <h2 className="heading">Read / Want to read</h2>
         {list.map((li, i) => (
