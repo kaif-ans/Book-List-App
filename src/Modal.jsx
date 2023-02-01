@@ -21,6 +21,7 @@ function Example({
         <Modal.Header closeButton>
           <Modal.Title>Add New Book</Modal.Title>
         </Modal.Header>
+
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -33,6 +34,7 @@ function Example({
                 autoFocus
               />
             </Form.Group>
+
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Author</Form.Label>
               <Form.Control
@@ -43,6 +45,7 @@ function Example({
                 autoFocus
               />
             </Form.Group>
+
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Date Added</Form.Label>
               <Form.Control
@@ -53,6 +56,7 @@ function Example({
                 autoFocus
               />
             </Form.Group>
+
             <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
@@ -68,6 +72,7 @@ function Example({
             </Form.Group>
           </Form>
         </Modal.Body>
+
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Cancel
