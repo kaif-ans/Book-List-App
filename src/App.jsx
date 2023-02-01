@@ -45,7 +45,7 @@ function App() {
       notes: "",
     });
   }
-  //
+
   function deleteItem(id) {
     const deleteList = list.filter((li) => li.id !== id);
     setList(deleteList);
