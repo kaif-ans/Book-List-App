@@ -62,7 +62,6 @@ function App() {
   //     prev.map((li) => (li.id === id ? { ...li, input: event.target.value } : li))
   //   );
   // }
-  // console.log
 
   return (
     <div className="full-bg">
