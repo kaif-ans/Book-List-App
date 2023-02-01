@@ -2,6 +2,7 @@
   background: seashell;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 .full-bg {
   background: rgb(229, 156, 156);
   border: 1px solid rgb(229, 156, 156);
@@ -9,6 +10,7 @@
   height: 100%;
   margin: 30px auto;
 }
+
 .main-bg {
   /* background nhi lag ra ispe */
   border: 1px solid white;
@@ -48,21 +50,24 @@
   border-radius: 10px;
   padding: 25px;
   background-color: lightpink;
-  margin: 15px ;
+  margin: 15px;
 }
-.list > p {
+
+.list>p {
   background: transparent;
   text-align: left;
   color: rgb(88, 32, 32);
 }
+
 .icon-div {
   background: transparent;
   text-align: right;
 }
+
 .icon {
   font-size: large;
   font-weight: bold;
   background: transparent;
   color: rgb(82, 14, 14);
   cursor: pointer;
-} 
+}
