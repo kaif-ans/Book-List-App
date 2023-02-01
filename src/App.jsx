@@ -57,12 +57,6 @@ function App() {
     setShow(true);
   }
 
-  // function handleEdit(event, id) {
-  //   setList((prev) =>
-  //     prev.map((li) => (li.id === id ? { ...li, input: event.target.value } : li))
-  //   );
-  // }
-
   return (
     <div className="full-bg">
       <div className="main-bg">
