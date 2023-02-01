@@ -60,7 +60,6 @@ function App() {
   // function handleEdit(event, id) {
   //   setList((prev) =>
   //     prev.map((li) => (li.id === id ? { ...li, input: event.target } : li))
-  //   );
 
   return (
     <div className="full-bg">
