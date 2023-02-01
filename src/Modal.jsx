@@ -34,7 +34,6 @@ function Example({
                 autoFocus
               />
             </Form.Group>
-
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Author</Form.Label>
               <Form.Control
@@ -45,7 +44,6 @@ function Example({
                 autoFocus
               />
             </Form.Group>
-
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Date Added</Form.Label>
               <Form.Control
@@ -56,7 +54,6 @@ function Example({
                 autoFocus
               />
             </Form.Group>
-
             <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
