@@ -24,7 +24,7 @@ function App() {
     });
   };
   const handleShow = () => setShow(true);
-
+  console.log(id);
   const [list, setList] = React.useState([]);
 
   function handleChange(e) {
