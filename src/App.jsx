@@ -25,7 +25,6 @@ function App() {
   };
 
   const handleShow = () => setShow(true);
-
   const [list, setList] = React.useState([]);
 
   function handleChange(e) {
