@@ -23,6 +23,7 @@ function App() {
       id: "",
     });
   };
+
   const handleShow = () => setShow(true);
 
   const [list, setList] = React.useState([]);
