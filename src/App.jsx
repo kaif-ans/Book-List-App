@@ -26,6 +26,7 @@ function App() {
 
   const handleShow = () => setShow(true);
   const [list, setList] = React.useState([]);
+
   function handleChange(e) {
     const handleName = e.target.name;
     const handleValue = e.target.value;
