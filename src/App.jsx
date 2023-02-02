@@ -31,7 +31,6 @@ function App() {
   // console.log()
   // console.log()
   // console.log()
-  // console.log()
   function handleChange(e) {
     const handleName = e.target.name;
     const handleValue = e.target.value;
