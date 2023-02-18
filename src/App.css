@@ -16,7 +16,7 @@
   border: 1px solid white;
   border-radius: 10px;
   width: 85%;
-  height: 100%;
+  height: 800px;
   margin: 45px auto;
   text-align: center;
   padding-top: 50px;
@@ -45,6 +45,17 @@
 
 
 /* LIST */
+.list-div {
+  /* border: solid; */
+  border-radius: 10px;
+  height: 550px;
+  overflow: auto;
+}
+
+.list-div::-webkit-scrollbar {
+  display: none
+}
+
 .list {
   /* border: 1px solid; */
   border-radius: 10px;
